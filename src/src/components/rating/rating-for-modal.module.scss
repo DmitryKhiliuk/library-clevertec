@@ -1,0 +1,33 @@
+@import "src/mixins.scss";
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 82px;
+    justify-content: space-between;
+    margin-top: 32px;
+    .title {
+        @include subtitle-large;
+    }
+    .rate {
+        display: flex;
+        width: 258px;
+        justify-content: space-between;
+
+
+    }
+}
+.mainForPage {
+    display: flex;
+    justify-content: flex-start;
+    img {
+        margin-right: 10px;
+        @media screen and (max-width: 433px){
+            margin-right: 8.67px;
+        }
+    }
+    .text {
+        color: #A7A7A7;
+    }
+
+}

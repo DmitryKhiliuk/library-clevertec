@@ -1,0 +1,48 @@
+.button {
+    position: relative;
+    top: -1.5px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    @media screen and (min-width: 500px) {
+        zoom: 130%;
+        top: 0
+    }
+
+
+    :nth-child(1) {
+        transform: translateY(-6px);
+    }
+    :nth-child(3) {
+        transform: translateY(6px);
+    }
+
+    span {
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: #363636;
+        left: 2px;
+        top: 11px;
+        transition: transform .5s, opacity .5s, background-color .5s;
+        @media screen and (min-width: 500px) {
+
+        }
+    }
+}
+.open {
+    span {
+        background-color: #f86a0b;
+    }
+
+    :nth-child(1) {
+        transform: translateY(0) rotate(45deg);
+    }
+    :nth-child(2) {
+        opacity: 0;
+    }
+    :nth-child(3) {
+        transform: translateY(0) rotate(-45deg);
+    }
+}

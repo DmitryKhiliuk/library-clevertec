@@ -1,0 +1,22 @@
+@import "src/mixins.scss";
+
+.subTitle {
+    @include subtitle-large;
+    margin-top: 32px;
+    @media screen and (max-width: 433px) {
+        margin-top: 24px;
+    }
+}
+p {
+    @include body-large;
+    margin-top: 16px;
+}
+.block {
+    margin-left: 30px;
+}
+
+
+
+
+
+

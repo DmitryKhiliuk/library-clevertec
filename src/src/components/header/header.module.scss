@@ -1,0 +1,130 @@
+@import "src/mixins.scss";
+
+.header {
+    max-width: 1440px;
+    height: 105px;
+    margin: 0 auto;
+    @media screen and (max-width: 824px) {
+        height: 96px;
+    }
+    @media screen and (max-width: 500px) {
+        height: 76px;
+    }
+
+    .container {
+        position: relative;
+        max-width: 1110px;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .menuHeader {
+            position: absolute;
+            width: 270px;
+            height: 152px;
+            right: 0;
+            top: 104px;
+            box-shadow: var(--box-shadow);
+            border-radius: 0 0 10px 10px;
+            background: #FFFFFF;
+            opacity: 1;
+            .menuContent {
+                height: 100%;
+                padding: 32px 24px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                align-items: flex-end;
+                .menuButton {
+
+                }
+            }
+        }
+        .menuHidden {
+            opacity: 0;
+            z-index: -1;
+        }
+
+        .headerSide {
+            width: 285px;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            @media screen and (max-width: 824px) {
+                opacity: 0;
+                z-index: -1;
+                position: absolute;
+            }
+
+            .logo__text {
+                margin-left: 8px;
+            }
+        }
+
+        .header__main {
+            width: 825px;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @media screen and (max-width: 824px) {
+                width: 672px;
+                padding: 0 16px 0 16px;
+                margin: 0 auto;
+                justify-content: flex-start;
+            }
+            .menu {
+                display: none;
+                @media screen and (max-width: 824px){
+                    display: block;
+                }
+            }
+            .title {
+                margin-left: 25px;
+            }
+
+            .user {
+                max-width: 400px;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                @media screen and (max-width: 824px) {
+                    opacity: 0;
+                    position: absolute;
+                    z-index: -1;
+                }
+
+                .greeting {
+                    @include subtitle-small
+                }
+
+                .avaBox {
+                    position: relative;
+                    overflow:hidden;
+                    width: 58px;
+                    height: 58px;
+                    border-radius: 100%;
+                    margin-left: 16px;
+                    .avatar {
+                        position: absolute;
+                        top:50%;
+                        left:50%;
+                        transform:translate(-50%,-50%);
+                        width: 58px;
+                        height: 58px;
+                        object-fit:cover;
+
+                    }
+                }
+
+
+
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,27 @@
+.filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+    width: 148.2px;
+    height: 38px;
+    border-radius: 30px;
+    box-shadow: var(--box-shadow);
+    color: #A7A7A7;
+    &:hover {
+        box-shadow: var(--box-shadow-hover);
+    }
+    &:active {
+        box-shadow: var(--box-shadovw-active);
+    }
+    @media screen and (max-width: 700px){
+        width: 38px;
+        padding: 0;
+        .text {
+            display: none;
+        }
+    }
+
+
+}

@@ -1,0 +1,43 @@
+.main {
+    .form {
+        .content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .dataBlock {
+                width: 540px;
+                @media screen and (max-width: 840px) {
+
+                    max-width: 305px;
+
+                }
+            }
+            .space {
+                width: 30px;
+            }
+            @media screen and (max-width: 433px) {
+                flex-direction: column;
+
+
+            }
+        }
+        .buttons {
+            margin-top: 52px;
+            width: 540px;
+            display: flex;
+            justify-content: space-between;
+            @media screen and (max-width: 433px) {
+                flex-direction: column;
+
+            }
+            .button {
+                width: 255px;
+                @media screen and (max-width: 433px) {
+                    margin-bottom: 16px;
+
+            }
+            }
+
+        }
+    }
+}

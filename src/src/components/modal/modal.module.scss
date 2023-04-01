@@ -1,0 +1,65 @@
+.main {
+    background: var(--background-main-color);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 16px;
+    .text {
+        color: white;
+        position: absolute;
+        top: calc((100% - 500px)/2*0.5);
+        @media screen and (max-width: 560px){
+            top: 16px
+        }
+    }
+    .content {
+        background: #FFFFFF;
+        display: inline-block;
+        border-radius: 16px;
+        position: relative;
+        .children {
+            .close {
+                position: absolute;
+                top: 32px;
+                right: 32px;
+                @media screen and (max-width: 560px){
+                    width: 16px;
+                    height: 16px;
+                    top: 16px;
+                    right: 16px;
+                }
+            }
+        }
+
+
+    }
+    .loader {
+        opacity: 0;
+        display: none;
+    }
+    .visible {
+        opacity: 1;
+        display: block;
+    }
+    .back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(54, 54, 54, 0.3);
+        backdrop-filter: blur(5px);
+        z-index: 100;
+
+    }
+}
+.mainBooking {
+    position: fixed;
+    background: rgba(54, 54, 54, 0.3);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+
+
+}

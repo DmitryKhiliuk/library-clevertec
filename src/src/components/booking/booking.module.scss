@@ -1,0 +1,34 @@
+@import "src/mixins.scss";
+.main {
+    .content {
+        min-width: 416px;
+        margin: 48px 56px;
+        @media screen and (max-width: 560px){
+            min-width: 256px;
+            max-width: 416px;
+            margin: 16px 24px;
+        }
+        .title {
+            width: 266px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .area {
+            width: 100%;
+            height: 132px;
+            border: none;
+            border-radius: 4px;
+            background: #F9F9FA;
+            padding: 12px 19px;
+            margin: 32px 0 52px;
+            resize: none;
+            &::placeholder {
+                @include body-large;
+                color: #A7A7A7;
+            }
+        }
+        .space {
+            height: 16px;
+        }
+    }
+}

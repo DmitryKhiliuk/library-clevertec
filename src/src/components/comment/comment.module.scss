@@ -1,0 +1,47 @@
+@import "src/mixins.scss";
+.comment {
+    margin: 16px 0 45px 0;
+    .userData {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .avaBox {
+            margin-right: 24px;
+            position: relative;
+            overflow:hidden;
+            width: 32px;
+            height: 32px;
+            border-radius: 100%;
+            .userAva {
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
+                width: 32px;
+                height: 32px;
+                object-fit:cover;
+            }
+        }
+        .userBox {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            @include body-large;
+            color: #727272;
+
+            .name {
+                margin-right: 24px;
+            }
+        }
+    }
+    .rating {
+        margin-top: 18px;
+    }
+    .commentText {
+        @include body-large;
+        margin-top: 16px;
+    }
+
+
+}
+

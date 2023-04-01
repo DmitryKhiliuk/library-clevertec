@@ -1,0 +1,9 @@
+@import "src/mixins.scss";
+.titleBlock {
+    margin: 92px 0 32px 0;
+    .titleDescription {
+        margin-top: 8px;
+        color: #A7A7A7;
+        @include body-large
+    }
+}

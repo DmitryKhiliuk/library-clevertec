@@ -1,0 +1,107 @@
+@import "src/mixins.scss";
+.main {
+    .content {
+        min-width: 416px;
+        margin: 48px 56px;
+        @media screen and (max-width: 560px){
+            min-width: 256px;
+            max-width: 416px;
+            margin: 16px 24px;
+        }
+        .title {
+
+        }
+        .step {
+            margin-top: 8px;
+            @include subtitle-small
+        }
+        .form {
+            margin-bottom: 16px;
+            .hintUserName {
+                @include info-large;
+                color: rgb(167, 167, 167);
+
+            }
+            .hintUserNameError {
+                @include info-large;
+                color: #F42C4F !important;
+            }
+            /*.hintUserName {
+                @include info-large;
+                margin-left: 12px;
+                color: rgb(167, 167, 167);
+                .latinUserNameHint {
+                    color: #F42C4F;
+                }
+                .numberUserNameHint {
+                    color: #F42C4F;
+                }
+            }
+            .hintUserNameError {
+                @include info-large;
+                color: #F42C4F;
+                margin-left: 12px;
+            }*/
+            /*.hintPassword {
+                @include info-large;
+                margin-left: 12px;
+                color: rgb(167, 167, 167);
+                .lengthPasswordHint {
+                    color: #F42C4F;
+                }
+                .upperCasePasswordHint {
+                    color: #F42C4F;
+                }
+                .numberPasswordHint {
+                    color: #F42C4F;
+                }
+            }
+            .hintPasswordError {
+                @include info-large;
+                color: #F42C4F;
+                margin-left: 12px;
+            }*/
+            /*.hintPhone {
+                @include info-large;
+                color: rgb(167, 167, 167);
+                margin-left: 12px;
+            }
+            .hintPhoneError {
+                @include info-large;
+                margin-left: 12px;
+                color: #F42C4F;
+            }*/
+            .space {
+                height: 50px;
+
+            }
+        }
+        .registerText {
+            @include body-large;
+            margin-right: 16px;
+            color: #727272;
+        }
+        .register {
+            @include button-small;
+            .link {
+                display: inline-flex;
+                justify-content: flex-start;
+                align-items: center;
+                .text {
+                    margin-right: 12px;
+                }
+            }
+
+        }
+    }
+    .resultContent {
+        width: 410px;
+        margin: 48px 95px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .errorText {
+            margin: 32px 0;
+        }
+    }
+}

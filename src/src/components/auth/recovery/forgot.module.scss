@@ -1,0 +1,57 @@
+@import "src/mixins.scss";
+.main{
+    .content {
+        min-width: 416px;
+        margin: 20px 56px 48px;
+        @media screen and (max-width: 560px){
+            min-width: 256px;
+            max-width: 416px;
+            margin: 16px 24px;
+        }
+        .link {
+            display: flex;
+            align-items: center;
+            .text {
+                @include button-small;
+                color: #727272;
+            }
+            .img {
+                margin-right: 15px;
+            }
+        }
+        .title {
+            margin-top: 55px;
+        }
+        .form {
+            .error {
+                @include info-large;
+                color: #F42C4F;
+            }
+            .description {
+                @include info-large;
+                color: #727272;
+                margin-bottom: 34px;
+            }
+        }
+        .space {
+            height: 16px;
+        }
+        .registerText {
+            @include body-large;
+            margin-right: 16px;
+            color: #727272;
+        }
+        .register {
+            @include button-small;
+            .link {
+                display: inline-flex;
+                justify-content: flex-start;
+                align-items: center;
+                .text {
+                    margin-right: 12px;
+                }
+            }
+
+        }
+    }
+}

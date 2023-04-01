@@ -1,0 +1,48 @@
+@import "src/mixins.scss";
+.main {
+    .profile {
+        display: none;
+    }
+
+    .hintUserName {
+        @include info-large;
+        color: rgb(167, 167, 167);
+
+    }
+    .hintUserNameError {
+        @include info-large;
+        color: #F42C4F !important;
+    }
+    .hintPassword {
+        @include info-large;
+        margin-left: 12px;
+        color: rgb(167, 167, 167);
+        .lengthPasswordHint {
+            color: #F42C4F;
+        }
+        .upperCasePasswordHint {
+            color: #F42C4F;
+        }
+        .numberPasswordHint {
+            color: #F42C4F;
+        }
+    }
+    .rd {
+        color: #F42C4F;
+    }
+    .hintPasswordError {
+        @include info-large;
+        color: #F42C4F !important;
+        margin-left: 12px;
+    }
+    .hintPhone {
+        @include info-large;
+        color: rgb(167, 167, 167);
+        margin-left: 12px;
+    }
+    .hintPhoneError {
+        @include info-large;
+        margin-left: 12px;
+        color: #F42C4F;
+    }
+}

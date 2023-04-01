@@ -1,0 +1,72 @@
+@import "src/mixins.scss";
+.main {
+    width: 256px;
+    border-radius: 16px;
+    box-shadow: var(--box-shadow);
+    margin: 32px auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    .selectBlock {
+        padding: 0 6px;
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: space-between;
+        .select {
+            @include body-large;
+            color: #A7A7A7;
+            border: none;
+        }
+        .throughButtons {
+            display: flex;
+            .up {
+                transform: rotate(180deg);
+                margin-left: 12px;
+            }
+        }
+    }
+    .weekDaysBlock {
+        display: flex;
+        justify-content: space-between;
+        .weekDay {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .daysBlock {
+        display: grid;
+        grid-template-columns: repeat(7, 32px);
+        grid-auto-rows: 32px;
+
+        .monthDay {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(167, 167, 167);
+
+        }
+        .weekEnd {
+            border-radius: 100%;
+            background: rgb(254, 235, 234);
+
+        }
+        .currentDate {
+            color: rgb(248, 54, 0);
+        }
+        .nextDate {
+            color: #363636;
+        }
+        .selected {
+            background: var(--background-main-color) ;
+            border-radius: 100%;
+            color: #FFFFFF;
+        }
+    }
+
+}

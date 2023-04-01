@@ -1,0 +1,56 @@
+@import "src/mixins.scss";
+.main{
+    .content {
+        min-width: 416px;
+        margin: 48px 56px;
+        @media screen and (max-width: 560px){
+            min-width: 256px;
+            max-width: 416px;
+            margin: 16px 24px;
+        }
+        .title {
+
+        }
+        .form {
+            .hintPassword {
+                @include info-large;
+                margin-left: 12px;
+                color: rgb(167, 167, 167);
+                .lengthPasswordHint {
+                    color: #F42C4F;
+                }
+                .upperCasePasswordHint {
+                    color: #F42C4F;
+                }
+                .numberPasswordHint {
+                    color: #F42C4F;
+                }
+            }
+            .hintPasswordError {
+                @include info-large;
+                color: #F42C4F;
+                margin-left: 12px;
+            }
+            .passError {
+                color: #F42C4F;
+                @include info-large;
+                display: none;
+
+            }
+            .visible {
+                color: #F42C4F;
+                @include info-large;
+              display: block;
+            }
+            .space {
+                height: 50px;
+            }
+
+        }
+        .resetText {
+            margin-top: 16px;
+            color: #727272;
+            @include body-large;
+        }
+    }
+}

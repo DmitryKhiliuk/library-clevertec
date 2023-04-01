@@ -1,0 +1,201 @@
+@import "src/mixins.scss";
+.bookBlockGrid {
+    width: 190px;
+    height: 470px;
+    margin: 0;
+    padding: 8px;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    cursor: pointer;
+    @media screen and (max-width: 433px){
+        width: 288px;
+        height: 470px;
+        padding: 8px 16px 16px;
+    }
+
+    .image {
+        width: 174px;
+        height: 242px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+            img {
+                height: 100%;
+                width: auto;
+            }
+        @media screen and (max-width: 433px){
+            margin: 0 auto;
+        }
+    }
+    .subBlock {
+        .ratingBook {
+            margin-top: 18px;
+        }
+        .description {
+            margin-top: 19px;
+            .title {
+                height: 54px;
+                width: 100%;
+                @include subtitle-small;
+                display: table-cell;
+                vertical-align: middle;
+                align-items: center;
+                text-align: left;
+                @media screen and (max-width: 824px) and (min-width: 500px){
+                    @include custom-text(700, 12px, 18px)
+                }
+                span {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+            }
+            .author {
+                height: 36px;
+                color: #727272;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: left;
+                @media screen and (max-width: 824px) and (min-width: 500px){
+                    @include custom-text(700, 12px, 18px)
+                }
+                @media screen and (max-width: 500px){
+                    font-size: 12px;
+                }
+            }
+        }
+        .button {
+            width: 166px;
+            height: 40px;
+            @include button-small;
+            margin: 19px 4px 8px 4px;
+            display: flex;
+            justify-content: center;
+            .dateDelivery {
+                color: #FF5253;
+                @include custom-text(700px, 24px, 30px)
+
+            }
+            @media screen and (max-width: 433px){
+                width: 256px;
+                position: relative;
+                left: -4px;
+
+
+            }
+        }
+    }
+}
+.slider {
+    width: 255px;
+}
+.bookBlockRow {
+    width: 100%;
+    height: auto;
+    padding: 16px 24px 16px 16px;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    @media screen and (max-width: 824px){
+        align-items: flex-start;
+    }
+    @media screen and (max-width: 433px){
+        padding: 16px 16px 16px 8px;
+    }
+
+    .imageRow {
+        min-width: 120px;
+        width: 120px;
+        min-height: 170px;
+        @media screen and (max-width: 433px){
+            min-width: 70px;
+            width: 70px;
+        }
+    }
+    .subBlockRow {
+        margin-left: 16px;
+        flex-grow: 1;
+        align-self: start;
+        @media screen and (max-width: 433px){
+            margin-left: 8px;
+            display: inline-block;
+        }
+        .descriptionRow {
+            @media screen and (max-width: 433px){
+                display: inline-block;
+            }
+            .titleRow {
+                @include custom-text(700, 22px, 32px);
+                min-height: 38px;
+                text-align: start;
+                @media screen and (max-width: 824px){
+                    @include custom-text(700, 24px, 30px);
+                }
+                @media screen and (max-width: 433px){
+                    min-height: 18px;
+                    @include subtitle-small;
+                    display: inline-block;
+                }
+                span {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+            }
+            .authorRow {
+                @include body-large;
+                color: #727272;
+                margin-top: 8px;
+                text-align: left;
+                @media screen and (max-width: 433px){
+                    @include custom-text(400, 12px, 18px);
+                    margin-top: 3px;
+                }
+            }
+        }
+        .actionRow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            @media screen and (max-width: 824px){
+                margin-top: 16px;
+            }
+            @media screen and (max-width: 433px){
+                margin-top: 4.33px;
+            }
+            .ratingBookRow {
+                zoom: .75
+            }
+            .buttonRow {
+                width: 174px;
+                height: 40px;
+                @include button-small;
+                .date {
+                    width: 200px;
+                    color: #FF5253;
+                    @include custom-text(700px, 24px, 30px)
+                }
+                @media screen and (max-width: 433px){
+                    margin-top: 18px;
+                    width: 186px;
+                }
+            }
+            @media screen and (max-width: 433px){
+                display: inline-block;
+
+            }
+        }
+
+    }
+
+}

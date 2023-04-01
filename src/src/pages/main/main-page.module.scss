@@ -1,0 +1,30 @@
+.main_page {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-top: 47px;
+    @media screen and (max-width: 825px){
+        padding: 30px 64px 0 64px;
+    }
+    @media screen and (max-width: 433px){
+        padding: 11px 8px 0 8px;
+    }
+    .container {
+        max-width: 1110px;
+        height: 100%;
+        margin: 0 auto;
+        padding-bottom: 62px;
+        display: flex;
+        justify-content: space-between;
+        .nav_books {
+            width: 279px;
+            margin-right: 6px;
+            @media screen and (max-width: 824px){
+                display: none;
+            }
+        }
+        .main {
+            width: 825px;
+        }
+    }
+}

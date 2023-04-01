@@ -1,0 +1,46 @@
+@import "src/mixins.scss";
+.table {
+    border: none;
+    border-collapse: collapse;
+    tr {
+        height: 42px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        width: 190px;
+
+        color:#A7A7A7;
+        @include subtitle-large;
+    }
+    td {
+        @include body-large
+    }
+    @media screen and (max-width: 824px){
+        tr {
+
+        }
+        th {
+            @include subtitle-small;
+            width: 138px;
+        }
+        td {
+            @include custom-text(400, 14px, 18px)
+        }
+
+    }
+    @media screen and (max-width: 433px){
+        tr {
+
+        }
+        th {
+            @include info-large;
+
+            width: 120px;
+        }
+        td {
+            @include info-small;
+        }
+
+    }
+}

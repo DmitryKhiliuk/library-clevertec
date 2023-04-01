@@ -1,0 +1,44 @@
+@import "src/mixins.scss";
+.error {
+    width: 100%;
+    max-width: 1110px;
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    position: fixed;
+    z-index: 2;
+    top: 56px;
+    background: #FEEBEA;
+    border: 2px solid #F42C4F;
+    border-radius: 5px;
+    @media screen and (max-width: 824px) {
+        max-width: 694px;
+        padding: 0 16px;
+    }
+    .icon {
+        width: 24px;
+        @media screen and (max-width: 824px) {
+            width: 18px;
+        }
+    }
+    .text {
+        width: 90%;
+        @include subtitle-large;
+        @media screen and (max-width: 824px) {
+            width: 90%;
+            @include subtitle-small;
+        }
+        @media screen and (max-width: 580px) {
+            width: 85%;
+        }
+        @media screen and (max-width: 430px) {
+            width: 75%;
+        }
+    }
+}
+.success {
+    background: #EBF9F1;
+    border: 2px solid #00CA71;
+}

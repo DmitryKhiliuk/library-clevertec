@@ -1,0 +1,235 @@
+@import "src/mixins.scss";
+@mixin subtitle-text {
+    &:after {
+        margin-top: 16px;
+        display: block;
+        width: 350px;
+        height: 1px;
+        content: '';
+        background: #EBEBEB;
+        transform: rotate(180deg);
+        @media screen and (max-width: 433px) {
+            background: white;
+            margin: 0;
+        }
+    }
+    @media screen and (max-width: 824px) {
+        @include subtitle-large;
+    }
+    @media screen and (max-width: 433px) {
+        @include custom-text(700, 18px, 28px);
+    }
+}
+.bookPage {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
+    .container {
+        max-width: 1110px;
+        padding: 27px 0 42px 0;
+        margin: 0 auto;
+        @media screen and (max-width: 824px) {
+            padding: 22px 64px 48px;
+        }
+        @media screen and (max-width: 433px) {
+            padding: 8px 16px 20px;
+        }
+        .breadCrumbs {
+            width: 100%;
+            height: 64px;
+            //display: flex;
+            //align-items: center;
+            color: #A7A7A7;
+            @media screen and (max-width: 433px) {
+                @include info-large;
+            }
+        }
+        .mainBlock {
+            margin-top: 42px;
+            display: grid;
+            grid-template-columns: 40.2% 57.21%;
+            grid-column-gap: 30px;
+            grid-template-areas:
+                'A B'
+                'A C';
+            @media screen and (max-width: 824px) {
+                grid-template-columns: 21.25% 73.75%;
+                grid-column-gap: 32px;
+                grid-template-areas:
+                    'A B'
+                    'C C';
+            }
+            @media screen and (max-width: 433px) {
+                display: flex;
+                flex-direction: column;
+            }
+            .img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                grid-area: A;
+
+                @media screen and (max-width: 433px) {
+                    width: 188px;
+                    margin: 0 auto;
+                }
+                .slider {
+                    width: 100%;
+                    height: 100%;
+                    background-color: #FFFFFF;
+                }
+                .empty {
+
+                    img {
+                        zoom: 150%;
+                    }
+                }
+            }
+
+            .description {
+                grid-area: B;
+                .title {
+                    @media screen and (max-width: 824px) and (min-width: 433px) {
+                        @include custom-text(700, 24px, 30px);
+                }
+                    @media screen and (max-width: 433px) {
+                        margin-top: 16.44px;
+                    }
+
+                }
+                .author {
+                    margin: 24px 0 32px 0;
+                    color: #A7A7A7;
+                    @media screen and (max-width: 824px) {
+                        @include subtitle-small;
+                    }
+                    @media screen and (max-width: 433px) {
+                        margin: 8px 0 42px;
+                        @include body-small;
+                    }
+                }
+            }
+            .annotation {
+                grid-area: C;
+                margin-top: 62px;
+                .title {
+                    @include subtitle-text
+                }
+                .text {
+                    margin-top: 16px;
+                    @media screen and (max-width: 433px) {
+                        @include body-small;
+                        margin-top: 16px;
+                    }
+                }
+            }
+        }
+
+        .rating {
+            margin-top: 42px;
+            @media screen and (max-width: 824px) {
+                margin-top: 52px;
+            }
+            .title {
+                @include subtitle-text
+            }
+
+            .visibleRating {
+                margin-top: 20px;
+                width: 221px;
+                display: flex;
+                justify-content: space-between;
+                @media screen and (max-width: 433px) {
+                    width: 100%;
+                }
+                .stars {
+                    @media screen and (max-width: 433px) {
+                        zoom: 140%
+                    }
+                }
+
+            }
+        }
+
+        .detail {
+            margin-top: 62px;
+            @media screen and (max-width: 824px) {
+                margin-top: 52px;
+            }
+            @media screen and (max-width: 433px) {
+                margin-top: 24px;
+            }
+            .title {
+                @include subtitle-text
+            }
+            .table {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                max-width: 1110px;
+                margin-top: 16px;
+                .tableLeft {
+                    width: 360px;
+
+                }
+                .tableRight {
+                    width: 630px;
+                    @media screen and (max-width: 824px) {
+                        width: 305px;
+                    }
+                }
+                @media screen and (max-width: 433px) {
+                    flex-direction: column;
+                }
+
+            }
+        }
+
+        .comments {
+            max-width: 730px;
+            margin-top: 30px;
+            .commentsTitleBlock {
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                .title {
+                    @include subtitle-text
+                }
+                .count {
+                    @include custom-text(400, 14px, 24px);
+                    color: #A7A7A7;
+                    position: relative;
+                    top: 2.5px;
+                    left: -265px;
+                }
+                button {
+                    position: absolute;
+                    top: 10px;
+                    left: 120px;
+                }
+            }
+        }
+
+        .button {
+            width: 350px;
+            height: 52px;
+            @include button-large;
+            @media screen and (max-width: 824px) {
+                width: 306px;
+            }
+            @media screen and (max-width: 433px) {
+            width: 100%;
+        }
+
+        }
+        .buttonGrade {
+            @media screen and (max-width: 824px) {
+                width: 100%;
+            }
+
+        }
+    }
+
+}

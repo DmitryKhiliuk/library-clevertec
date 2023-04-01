@@ -1,0 +1,17 @@
+.button {
+    height: 38px;
+    width: 38px;
+    border-radius: 100%;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: var(--box-shadow);
+    &:hover {
+        box-shadow: var(--box-shadow-hover);
+    }
+    &:active {
+        box-shadow: var(--box-shadovw-active);
+    }
+}

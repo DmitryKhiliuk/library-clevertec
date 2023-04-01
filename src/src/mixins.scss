@@ -1,0 +1,65 @@
+// text styles
+
+@mixin custom-text($fw, $fs, $lh) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+}
+@mixin subtitle-large {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+@mixin subtitle-small {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+}
+@mixin body-large {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    @media screen and (max-width: 500px) {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+@mixin body-small {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+@mixin info-large {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+@mixin info-small {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+@mixin button-large {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    @media screen and (max-width: 500px) {
+        line-height: 20px;
+    }
+}
+@mixin button-small {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    @media screen and (max-width: 500px) {
+        font-size: 12px;
+    }
+}
+
+
