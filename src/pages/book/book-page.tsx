@@ -62,7 +62,7 @@ export const BookPage = () => {
     useEffect(() => {
         dispatch(fetchCategories())
         dispatch(fetchBook({bookId}))
-        dispatch(fetchBooks())
+
         dispatch(fetchUser())
     }, [dispatch, bookId])
 

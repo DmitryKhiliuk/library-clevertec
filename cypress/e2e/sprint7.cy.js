@@ -480,7 +480,7 @@ const USER_EXPIRED_BOOKING = {
         id: 460,
         handed: true,
         dateHandedFrom: '2023-03-06T18:44:05.903Z',
-        dateHandedTo: '2023-03-30T18:44:05.903Z',
+        dateHandedTo: '2023-12-30T18:44:05.903Z',
         book: {
             id: 71,
             title: 'Нескучная детская психология. Как общаться с ребенком, чтобы он вас слушался, и слышал',
@@ -4831,7 +4831,7 @@ describe('Sprint 6', () => {
         }).as('sendRating');
         // if change data by req
         if (isSuccess) {
-            cy.intercept('api/books/!*', BOOK_INFO_PAGE_AFTER_COMMENT);
+            cy.intercept('api/books/*', BOOK_INFO_PAGE_AFTER_COMMENT);
             cy.intercept('api/books*', BOOK_INFO_PAGE_AFTER_COMMENT);
         } else {
             cy.intercept('api/books/!*', BOOK_INFO_PAGES[0]);
