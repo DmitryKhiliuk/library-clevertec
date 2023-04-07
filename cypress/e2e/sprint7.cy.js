@@ -4290,7 +4290,7 @@ describe('Sprint 5', () => {
     });
 });
 
-describe.only('Sprint 6', () => {
+describe('Sprint 6', () => {
     const myId = 8;
     const myName = 'Фёдор';
     const myLastName = 'Сумкин';
@@ -5058,7 +5058,7 @@ describe.only('Sprint 6', () => {
                 getContentnBooking();
                 authorize();
             });
-            it.only('check rate modal elements', () => {
+            it('check rate modal elements', () => {
                 cy.intercept(`https://strapi.cleverland.by/api/books/1`, {
                     body: BOOK_INFO_PAGES[0],
                     statusCode: 200,
